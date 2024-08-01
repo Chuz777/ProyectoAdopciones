@@ -80,3 +80,110 @@ tbody tr:nth-child(even) {
     background-color: black;
     color: white
 }
+
+
+
+
+/*DONAR ECT CHUZ*/
+
+
+
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div span {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #007bff;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 20px;
+}
+
+.donaciones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.donaciones img {
+    height: 100px;
+    margin-right: 20px;
+   
+}
+
+.sinpe-container {
+    text-align: center; 
+}
+
+.sinpe-container img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+.sinpe-container p {
+    margin-top: 10px; 
+}
+
+.contact-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
+
+.icon2 {
+    width: 250px; 
+    height: auto;
+    margin-right: 250px;
+    vertical-align: middle; 
+}
+

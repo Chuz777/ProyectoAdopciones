@@ -1,0 +1,184 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+
+
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>         
+            <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>         
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>         
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>         
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+            <link href="css/estilos.css" rel="stylesheet" type="text/css"/> 
+
+
+    </head>
+    <body>
+        <header th:fragment="header" class="header mt-4">
+
+            <img class="icon" src="https://lh3.googleusercontent.com/fife/ALs6j_HwNc9V2i9esbA0D4HhVz7_brO5wOu87X-94vR1RW8QvQko61T5pvy_ytth26yeqQr3zz3Zgy29-wIXyB3jR42_NbB-HOaTfEiFl4Epd-8QMIsI3gRdghMnr4q2DBQqZ-N9fUmlPn819HAlc-7w2im5mH26i7-5wHnLjh_korz7BwyFvsn1MJdNCYH5kdphpL9g5RO6m2TOQeHqoOASoQ_1mdbjd8EALEIQgajPKZtUgB0x46Z8AAp8KOAe30mYRcH-DDBxrlbfDYg75amDqzKF8ayzEOZunzI3GyucbdncB-dRkhc1IKwmZMy163Jr4k9lGDpRrPAtDxIDDYDyo8Ux-wSFc74d2QZHFXTtCDPj2Lyp9JmuatgKVlLwEZdr2JJ1oSDA7fA2whEbwziHUt6fzpCMWrylcYA9fgXdvSD8s0CSH-glNFPOfNGF9pucYbyjKM2_9lYrz4axjgo9u0dmQV9VTfVE7gh46UN6_o8_ao4g_5PZSPOYIfhn-OEOBiBaT-d0cwWCDNH3Yy98njk5MCbHn0gxFLQJ03OPkesctDGUhplBi8s-6x46ExcHmFpG_zWoZNuhdxsEYsX4XE5CqlftWPrmsMV-riOTwiUDxruo483_vJgzK1ZP5Y1z9zKFgXMxPXd7UXTFcNvdo6tC5P-w_FVHTDBDAPNS5WaAwVjQ6k4GezNNOxpFqc0krlF2WjtJkL0Q4sWH9JtOuopE5LR0CvGfR6IwcULYzLJ7EQJAanCvFSCJRniQmVDAs2TIl3Brz4tmtWhjvRSWabSOP6E9KsgdQwkTwmlunnRE32cidpiVf2AdA1FR8K6MtUOlUx2gYj38T_caZLw966IzrcSk41PfY0OSnO1QoG0a39kHBNNmviIFq3w-ddCQ8JsjTs_I332sVq-b3RBhesP_arW0ldV0m4081qzvZMu4tsJBmiKi-xpg6N68f8oaxtcvoD0XAdOGb1malJF-JTcfs99jJvQLejInpS4QrnJ-tuKObk7Y5QforJXqk515SHy2IWC3gGU4lXXJ4oonceGW6O5nvDy1ELIVNGyDRwNupQOShXYWK72c6ADQfqANU6C1npGsz9HiYJysFANo65OK-8TuEov4ISLwUTdBp3C5p_b1QPWhgfg8BGJtbJSUCQYY=s992-w992-h416-n-k?authuser=0" alt="Salvando unas Patitas">
+
+
+                <nav class="navbar navbar-expand-sm navbar-white bg-white p-3">
+
+
+                    <!-- Contenido de la barra de navegación -->
+                    <div class="container">
+
+                        <div class="col-md-6">
+                            <h1><strong><a class="navbar-brand" href="/">Peluditos en Adopcion</a></strong></h1>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a th:href="@{/registro}" class="btn bg-gray rounded-pill"><strong>Registrarse</strong></a>
+                            <a th:href="@{/iniciarSesion}" class="btn btn-custom-purple rounded-pill"><strong>Inicio de sesión</strong></a>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <!-- columna -->
+                            <ul class="navbar-nav">  
+                                <!-- internalizacion -->
+                                <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=es)}">ES</a></li>                                 
+                                <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=en)}">EN</a></li>                             
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+                <! aqui empieza el menu horizontal con fondo celeste-->
+
+
+                <section id="main-header" class="py-2">
+
+                    <div>
+                        <nav class="navbar navbar-expand-lg custom-navbar nav-fill w-100">
+                            <style>
+                                .custom-navbar {
+                                    background-color: #add8e6; /* Color celeste */
+                                }
+                            </style>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav justify-content-between w-100">
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/}">[[#{plantilla.inicio}]]</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/perrito/listado}">[[#{plantilla.perrito}]]</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/gatito/listado}">[[#{plantilla.gatitos}]]</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/donar}">[[#{plantilla.donar}]]</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/contacto}">[[#{plantilla.contacto}]]</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link" th:href="@{/sobrenosotros}">[[#{plantilla.nosotros}]]</a>
+                                    </li>
+
+
+                                    <!-- Agrega más elementos aquí -->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+        </header>
+
+        <main>
+
+            <h2 th:text="#{donacion.mensaje}">Tu donación salva y ayuda a muchos animalitos</h2>
+            <p th:text="#{donacion.instrucciones}">Puedes hacer una donación utilizando PayPal, SINPE o una transferencia bancaria.</p>
+
+            <div class="donaciones">
+                <!-- Aquí las donaciones que son 3 -->
+                <script src="https://www.paypal.com/sdk/js?client-id=BAATZkTImIFNknRG7QjjjhH1V2W9zGK9g4Y5ZUCMiD2Rw9Qljy01DuVJZo9SoowweW0toWunpq8kqMTOkM&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+                <div id="paypal-container-WAZ7QK93ZKPNL"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "WAZ7QK93ZKPNL",
+                    }).render("#paypal-container-WAZ7QK93ZKPNL")
+                </script>
+
+
+                <div class="sinpe-container">
+                    <img class="icon2" src="https://lh3.googleusercontent.com/fife/ALs6j_EjjgrKb1eEYh-3mQT89RpMZXepBlkXQEKuXTTyOC74xo2TDmipc8b4BA3CUzUmda993g0R9Z2h7y-TdIx6xiISog6Eyj95qx7cB2jsdCKbqY49VjNSIJ3HJgdyqZ54DaLBMw_zIxD5rdiH3fXTDabdHOVs5WVxsHNOZfpJQfrR4514zRd3tnPuu2fXr732LyBCKJj8b1sYezafZ4EpluqECQp4ATasTky6pyEA3ZRBgsuoQnEv34MnHNGc9fXQzbt2xeu7vDwSVYtM9pJY6EpGDgQkII4hl06w8DcvQRdS_pRb0E9MG3zc54-0y42GsZjt1tvx8Oi_whguCiXGQk17OjvtqgSeQARqKFnUHlcTKo1re-_d08qcIkqdBkbQ6MBvfBkImAREgtYqgh_XJuqP8hL-hJfNel5CEmmQ3KUDyJ-zHgYTSEaB8TpzoDq-XEegoM8-Z-WUV-uYqkhLiQxOHt8vr-BLmFMgt-nLKVGQHfiWa23gsUOAvMjOZFPe901jeq2RJjrYdvgWmV628IUaUuZaJJ_Y6vutlNsOViRZ8uChchVg7v3GGaWuHEsCwQtFnaMLQR5gSKWYDaNIC8GatdcZtcqzeL_MX5YHE2hr0cDJYqE7s45B1l_6Y8xbFDrDKQB6XhVNw79_JOMolt9Az22PVSCsA9-l8AJjRQtOkdxuAiQWwLrl7LX1jeqcNw0iatZDw_eHwtmGPWkg_6cF7xJjGugVVur6xUXls-Y3FI0jW5tNiVJ3_hWhiyDs-YSIkGxHUPwyq541Bs0eyBNDhw5JpPvCN0i3h3EfG3jqjr3jQRqspy6G1A7YG3CYGvOaaphRZmm0jBEbWsWwt6GN3b8qf1hRHLi-N1C-xaQ8RuQip9QZ_7dr3JTEX0hfZ8-IAI3gI3DGiU98u4D5Y0Dg9DtnD8QR9dRbgRlH--2yjLzpIFlJPe5CBXFi1nVC_AJKBrt7sbO_eV5Y9Lw8fw-4B5Si-dOwi_2oEvXSS0xTKoH4EwqO-1HMPfGhH3fFB_mZ_fNlGGe7G8fRTg_UGwI2_o7bQJujZPgBgoqEosumQZWeuFbMZvOyCPre6Z808i9KjyjcENWHDyfrC1S4aXqqkhQGBU8OXfqPv4sZyFoxC-UXVsBr5UmrUVHTmFsiTis=s860-w860-h350-n-k?authuser=0" alt=""/>
+
+                    <p th:text="#{donacion.titulosinpe}">titulosinpe</p>
+
+
+                </div>
+
+
+                <div class="sinpe-container">
+                    <img class="icondonar1" src="https://lh3.googleusercontent.com/fife/ALs6j_HYSA0ZNM0sG_LUKXg8-M8z_5PZIvO4_ZrEb70FEbKD-ByXdl4jSWUyp3dJIm_zs0D520blyPEjWtzpZZAwRTYHx79t4PXAz8RG-jxKADL2B5Kzawmij4l8zX6nHcdNBeripyrhw5DcqGc5vKu-UR4qpRsi1l4Mt1brBFBI-5YjbVcrdaXkKAhbzphXktJS2p7sg7c0PnXy9MzKCjnLeg2SANpEMT-xBsLJjbgcbEDXpX9SoBNuhDn6S72KVmzLxFY2ZObLnkylroQEAABTtRhKfAtNKYL9AsqFC39bTd8ccop1WLsRjl-njjQNHiX5ZWEqLFpH2MtLnItRsHsMn2tMH2gDRMuGnZxLfx8r5Zq-jyH92aXGXP7f48pUvLJLkjMDtLgZGmj4EpjRA_429zmvblBUX0JuM8YKBiqRFV1iEXOJt5l2ZsOvcRSn1hK16Gj6UJPcA5_qOOowFuwewh46pB-Nahvp6FPwq6jWYs482i_e-cQAQqU0uZMeGh-euelZCPZWU7qOLnX6t1FH8O7A7Gl6Ys_QRXJSmOybD1y5BkaOyJHJIfSYgML0EhfzLqTUapKyIV4oad4uLitaRTqocYglTEdmTTXiiSlhnKb73rj_8g6C-2WzEVhZspp_IBhGKqBrzgcTjvq_u3ooe6X0DkxQdaRTDhjo_hByGK3nAWyKb-6neSYG3Yuv0QyMJCavIJ5qPCEN2OUNfVz5JpDoh5F3A4vIDtgmJt7Tt1R8AqO6U8LNusdRinVo8d7QF4DZl5smBeo9wJVENhhHwYIuVo0QNuJ_KdebR1i32bLk0TX6AqsF1UBTxm7-3I6Wx2bJ_I26uzD662F3LllpYyBdgpW0UetTwHysyAGYC-ZXfK-tHftfbkmjBIuetAFSQ69IMY9F9DFCCb55dVQvyktAMKGM1pGNiOTEdNIGrEpkP2mqRj7Ph7jTSwX3ybZ59dsNP0OvQBeqT-NzLWC3m5J7OEnw8kIKECqE_U3H0xBB8ZKp6rIA87DGuZPXuiWlCtvWDwCP4V5BIhNljqfGrCXK7lp2jITN6rqKoGpw_j6JJqQ__1idAz4xeyJ7A-xhlstwnjYHtAxONrvkHHRHXBTPFjVtfwJlizwDtHUj_Eid-MDvvXgmhvMIrK_GhlxkxZCF=s2048-w2048-h1193-n-k?authuser=0" alt=""/>
+
+                    <p th:text="#{donacion.mensajebanco2}">SINPE</p>
+                    <p th:text="#{donacion.titulodecuenta1}">titulodecuenta1</p>
+                    <p th:text="#{donacion.cuenta1}">cuenta1</p>
+                    <p th:text="#{donacion.titulodolares1}">titulodolares1</p>
+                    <p th:text="#{donacion.titululodolar}">titululodolar</p>
+                    <p th:text="#{donacion.cuentadolares1}">cuentadolares1</p>
+
+                </div>
+
+                <div class="sinpe-container">
+                    <img src="https://lh3.googleusercontent.com/fife/ALs6j_F6JqKWeauBcuIRIXkl6_AZOfQzJwFjrmP6LK3qiXnPJEdVOJxwOrISnOvB3eCUTcRX9wD8Nsn6PvYmGZqviknndvtUX5nGfNhYJxgkDxa9KdWsntXGWkHpjQ8cu87j8Q-dIjGcrCGhC2XVxia5Zhv7Pm_z_XMuO0wMEVqzLIpc8jCjJbs6E0vzbwPlMthEl5DJlPmgb_xQ1_K7ThKfzeaXcrUjVylutWWzaTkaEmt_J919waUzaqKY24EgNwa1GOpKv9Z748hiNWjChs2S9FzjqAjaDcyfuIIdI_aWzPm-WazLeShS6C2Tl81HshCDawTA368vND_oi0qgdR30kv1KlxcvQQ7Hd95F-II8xOu_vkCFXj0tLK2OhY590CNNPUI8xDgBESBXRRI0ap60XJkuYwmPSteOHL6iAjl6ItlAvqANxPGugm5inN86lO9gymqXVUJ9l5SQFW_CJKU_pZ0-ClY2uKEccDPg8_IC5xFfiRXUfysH5pkYP_CdaUfBqfHxhpSJuyzCp0hk_1zfHj_fQbZaLv05KqMJ6VU3apisCAF1Q57ypi6Vtl7AL89raNN2VbGMXGfM0L3WXMMQAoszlGsFJy6uCUT2l9jO-23yWavMM_ySSodqkN4tzR9av8afR-08ra2zdpqq83Fw5Fp4zZhm8iN_Auk-pHdS60jKvUoFiSgRdqGA57RcQeCT_gXCaehlfhPRSzOh3LpOMjyI02vs9ilx0MyfeBDDwIELCFNODW2LyCo3qOOVy1TNJRCsaEFxd6JcGTICPMaNOjzZ_Lk0j58_-iwcbbWQ44bYhU3evqs5C23x5HzuDwlVZBVJcxLnBKoX0-L1QlJWZrVrRbYNv5vg3D3hr10p_z9uK2UBzfc1ckDdsWZYSRoxgztRJ9CpeeQmzIDEtxfAmKACZDoKTn6qPDXuP-e9Clde_i-iL84P8vpb0mkhmwvLi5Ng0JGjyTLPqJrIT379LCttqPN9UDTxQQY69ArQ4CeRgE5_5qgz--Cyfupjf33x_jQqKc0R6M_CNaeQltIyr9s7X7nUQZisAQGGSbU94-ZDpbozHn0YfY7HkdobJaJGLJqibZdC-meONTwMcJF8GndeiBVWRiqcy-t0i2PtI3r_3FsIc8Hzud6nWY3lwJcTAEA=s500-w500-h500-n-k?authuser=0" alt=""/>
+
+                    <p th:text="#{donacion.mensajebanco1}">Tranferen</p>
+                    <p th:text="#{donacion.titulodecuenta2}">titulodecuenta2</p>
+                    <p th:text="#{donacion.cuenta2}">cuenta2</p>
+                    <p th:text="#{donacion.titulodolares2}">titulodolares2</p>
+                    <p th:text="#{donacion.titululodolar1}">titululodolar</p>
+                    <p th:text="#{donacion.cuentadolares2}">cuentadolares2</p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </main>
+        <footer th:fragment="footer" class="bg-info text-white p-1 mt-4">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        &COPY [[#{plantilla.derechos}]]
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
+

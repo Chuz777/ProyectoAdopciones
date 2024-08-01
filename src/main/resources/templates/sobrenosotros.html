@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+     
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>         
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>         
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>         
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>         
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Salvando unas Patitas">
+        <h1 th:text="#{titulo.pagina}">Salvando unas Patitas</h1>
+        <div>
+            <span th:text="#{bienvenida.mensaje}">Hola, Usuario!</span>
+            <button th:text="#{boton.cerrar_sesion}">Cerrar Sesión</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}" th:text="#{menu.inicio}">INICIO</a></li>
+            <li><a th:href="@{/perritos}" th:text="#{menu.perritos}">PERRITOS</a></li>
+            <li><a th:href="@{/gatitos}" th:text="#{menu.gatitos}">GATITOS</a></li>
+            <li><a th:href="@{/donar}" th:text="#{menu.como_donar}">COMO DONAR</a></li>
+            <li><a th:href="@{/contacto}" th:text="#{menu.contacto}">CONTACTO</a></li>
+            <li><a th:href="@{/sobrenosotros}" th:text="#{menu.sobrenosotros}">SOBRE NOSOTROS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="about-us-content">
+            <h2 th:text="#{sobrenosotros.titulo}">Sobre Nosotros</h2>
+            <p>
+                ¡Bienvenido a nuestra página dedicada a la adopción de perros y gatos! En nuestro refugio, nos dedicamos apasionadamente a encontrar hogares amorosos para nuestros amigos peludos. Contamos con una amplia variedad de perros y gatos de todas las edades, tamaños y razas, cada uno esperando ansiosamente su oportunidad de ser parte de una familia. Desde cachorros juguetones hasta gatos tranquilos y afectuosos, todos nuestros animales han sido cuidadosamente evaluados y están listos para brindar amor incondicional a sus nuevos dueños.
+            </p>
+            <p>
+                Nos enorgullece ofrecer un proceso de adopción transparente y comprensivo. Nuestro equipo de dedicados voluntarios y expertos en cuidado animal está aquí para guiarlo en cada paso del camino, desde la selección del compañero perfecto hasta el seguimiento después de la adopción. Además, proporcionamos información detallada sobre cada animal, incluyendo su historia, personalidad y necesidades específicas, para asegurar que cada adopción sea un ajuste ideal tanto para el animal como para la familia. ¡No esperes más para cambiar la vida de un perro o gato necesitado - encuentra tu nuevo mejor amigo hoy mismo!
+            </p>
+            <p>
+                Somos un refugio que fue fundado en el 2010 y con ayuda de muchos colaboradores se hizo posible este sueño. Tenemos la capacidad de albergar hasta 100 animales.
+            </p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Gracias a todos los que nos ayudan a hacer esto posible.<br>Un abrazo,<br>El equipo</p>
+            <p>&copy; <span th:text="#{plantilla.derechos}">Derechos reservados</span></p>
+            
+        </div>
+    </footer>
+</body>
+</html>

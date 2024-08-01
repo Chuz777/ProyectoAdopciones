@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>         
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>         
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>         
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>         
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/> 
+        
+</head>
+<body>
+    <header th:fragment="header" class="header mt-4">
+        <img class="icon2" src="https://lh3.googleusercontent.com/fife/ALs6j_HwNc9V2i9esbA0D4HhVz7_brO5wOu87X-94vR1RW8QvQko61T5pvy_ytth26yeqQr3zz3Zgy29-wIXyB3jR42_NbB-HOaTfEiFl4Epd-8QMIsI3gRdghMnr4q2DBQqZ-N9fUmlPn819HAlc-7w2im5mH26i7-5wHnLjh_korz7BwyFvsn1MJdNCYH5kdphpL9g5RO6m2TOQeHqoOASoQ_1mdbjd8EALEIQgajPKZtUgB0x46Z8AAp8KOAe30mYRcH-DDBxrlbfDYg75amDqzKF8ayzEOZunzI3GyucbdncB-dRkhc1IKwmZMy163Jr4k9lGDpRrPAtDxIDDYDyo8Ux-wSFc74d2QZHFXTtCDPj2Lyp9JmuatgKVlLwEZdr2JJ1oSDA7fA2whEbwziHUt6fzpCMWrylcYA9fgXdvSD8s0CSH-glNFPOfNGF9pucYbyjKM2_9lYrz4axjgo9u0dmQV9VTfVE7gh46UN6_o8_ao4g_5PZSPOYIfhn-OEOBiBaT-d0cwWCDNH3Yy98njk5MCbHn0gxFLQJ03OPkesctDGUhplBi8s-6x46ExcHmFpG_zWoZNuhdxsEYsX4XE5CqlftWPrmsMV-riOTwiUDxruo483_vJgzK1ZP5Y1z9zKFgXMxPXd7UXTFcNvdo6tC5P-w_FVHTDBDAPNS5WaAwVjQ6k4GezNNOxpFqc0krlF2WjtJkL0Q4sWH9JtOuopE5LR0CvGfR6IwcULYzLJ7EQJAanCvFSCJRniQmVDAs2TIl3Brz4tmtWhjvRSWabSOP6E9KsgdQwkTwmlunnRE32cidpiVf2AdA1FR8K6MtUOlUx2gYj38T_caZLw966IzrcSk41PfY0OSnO1QoG0a39kHBNNmviIFq3w-ddCQ8JsjTs_I332sVq-b3RBhesP_arW0ldV0m4081qzvZMu4tsJBmiKi-xpg6N68f8oaxtcvoD0XAdOGb1malJF-JTcfs99jJvQLejInpS4QrnJ-tuKObk7Y5QforJXqk515SHy2IWC3gGU4lXXJ4oonceGW6O5nvDy1ELIVNGyDRwNupQOShXYWK72c6ADQfqANU6C1npGsz9HiYJysFANo65OK-8TuEov4ISLwUTdBp3C5p_b1QPWhgfg8BGJtbJSUCQYY=s992-w992-h416-n-k?authuser=0" alt="Salvando unas Patitas">
+                
+                
+                <nav class="navbar navbar-expand-sm navbar-white bg-white p-3">
+                
+             
+                <!-- Contenido de la barra de navegación -->
+                <div class="container">
+                    
+                    <div class="col-md-6">
+                        <h1><strong><a class="navbar-brand" href="/">Peluditos en Adopcion</a></strong></h1>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a th:href="@{/registro}" class="btn bg-gray rounded-pill"><strong>Registrarse</strong></a>
+                        <a th:href="@{/iniciarSesion}" class="btn btn-custom-purple rounded-pill"><strong>Inicio de sesión</strong></a>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <!-- columna -->
+                        <ul class="navbar-nav">  
+                            <!-- internalizacion -->
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=es)}">ES</a></li>                                 
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=en)}">EN</a></li>                             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            
+            
+
+            
+            
+            
+            
+            
+
+
+
+            <! aqui empieza el menu horizontal con fondo celeste-->
+
+
+            <section id="main-header" class="py-2">
+
+                <div>
+                    <nav class="navbar navbar-expand-lg custom-navbar nav-fill w-100">
+                        <style>
+                            .custom-navbar {
+                                background-color: #add8e6; /* Color celeste */
+                            }
+                        </style>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav justify-content-between w-100">
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/}">[[#{plantilla.inicio}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/perrito/listado}">[[#{plantilla.perrito}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/gatito/listado}">[[#{plantilla.gatitos}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/donar}">[[#{plantilla.donar}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/contacto}">[[#{plantilla.contacto}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/sobrenosotros}">[[#{plantilla.nosotros}]]</a>
+                                </li>
+                                
+
+                                <!-- Agrega más elementos aquí -->
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            
+    </header>
+    
+    <main>
+       <div class="contact-columns">
+            <div class="contact-column">
+                <h2 th:text="#{contacto.titulo}">Contáctanos</h2>
+                
+                
+                
+                <img class="icon" src="https://lh3.googleusercontent.com/fife/ALs6j_EILfz4rR7EviaiWS1LSvkOnCEgSX3Oo4RxnNF3IMRTyTWjb94yKJKcgVcpN2IjDMggStAnmM3MyLfpbxzr3Ay5Rx8y5ZZhc65zoT4_Gp73_XuutzWzh1M0ds-Oqp8r0mIqd5gL444DXt8387yoBf7t7Pg1vFj06SWgDZ8ZTLgA0HSdBaHD0dth2mV_pPiX0ThkgIN9mFWJcucRo_lpBpQhNygXFavEBrtCw71-mFgk6TMz9SRDOYiKxmJFlTfAAEygrzqowmPjbDh6lO0jOkFrYy92jqRzMyAelzKrsGNrrBbYcLP-N-5i-a_KAA5TRJ83_0mbIQgotO_UUt_jlsxlWvFFvWvKIt-jIE0ObNOJBNF8nT7wslzY-DgxZMxwGT1HqliwoUEEAeMdQlVz45W_eW7ikAaJhmK7KH3ETEHdcGfkskrG9Ix9Uxy2QiDedNHGlVDKE0AvbZREbqE98fXftlc0_YQABbsaJE_EW0cYp4HL3aoIp7MSGKkaICwkA7ZQ0KyNF3I71LpuJFPiPMyEOvDS-KrADgpdiWFm8Vb2R1lYuUN6rdoO2kz-mt5F-8VcL9B1_0o11yOUVvOwjFRQ1u7qsicO0Ah2elzhbgmCCP2uAJ67pE_R8N8JVozKqeBNtpdSl2OUIomLAGGtjYXqeqCBryEbfUvx3b21KD3S80eoPjgAXioJJyf5lIYTrezWcNcarlRSfbiu_6Qevnmd72Hd3MEJwev34Q_VqI-bUPmQV7OsSMQfBDPQtWharOOzPOKDWBykJf9zXJhWRXGR7DUlov82XMxoY363TPXb_lAlpF4gGe7VDSoKzosIKhYqpgay0u3E94qxbVYGsu_yTIZ3eNpNmfooNp5F5cVojdVCZ3e4k4ZAHi1I94ewRcmsj8I2xdD5cQ-ciVt0dMF-K1_idEKDRUhUZ1kXuYvglHR9R7nMAQ3FU3hstJhNkUuhE40FEkyrS_9VDZmafk64JUgDGm5Bfa7KZ7Z-dDuLikqfSUbj9xuQKvZhXj3ZtxU3Pd2GZXbQFfBzy73HTOyCcLRhwBwG5jyVROOlHFfYHyMttqHxqXXq45yQDXKSCWEQwxZG0fqXLm3zitQN3Ftvjh26yv5BAhz82LoevQ3L_JwCG8OMTjJpvhPJuNCZqKw=s800-w800-h800-n-k?authuser=0" alt=""/>+506 5000-1111<p></p>
+                <img class="icon" src="https://lh3.googleusercontent.com/fife/ALs6j_F5jdQ-Gd_iFfGyYGlBy9OVl6zBCfjhbzZwP9KfrUQMSZqR6fqxa2qT5vtXMEUZIEwMAE74ZUQJdEA3_a3oE2zhQAn2IcZMJMkGC300J0UGRBRzxU0VNvtY9KgBOayyGeVOKBLY_H5GLSEcb2Ccsv6L7ijcN9XkH0PHL3AK-h6R6W_SPhATzW6UlJAuMvWLmND0HvOETNDadVNqWBKG3LOYvxfxYTczAGhwhceA9MTBfDwi26PdpVpbYoZVj50yXTrpA6via3mFEcOd75gr5G02IIpMOKxxP_mSA_L2qEqJnaHuw71b7TiutZup_q5fUHzVp-hcMtUDD5qJehiuOowKWw5GQp49MqmVh7WxQk36c3tbDKv1rbw6s9GH6GXJY7ly9nGSsVh3HV0fCTszgGRGH7ujKrH6orfKgmYSRw7_GqJuKelB4PU60bhVvh294KsAgAb_1tOnLboc5YzzDoam1uIaa4usROW0akSFJPxg48s1HvdF0AnvxMJuEHeLsfKtVkBKXvvDhbr-nOamjqF8RQWIE94WcBIRQMiEUvGysHn8bzsxlIIVoB-xKKby2bXwYr3dMtKWRxrT9-T_GNqjxDzXt47so0sLiVvpQS6Ni_4gjXj47ONgCwEEEf_1D416ixEphPZWlWybRzF94bzyq03R57OHH9o_4KtnsgnOl9xPiIy7nIHGR-wOPEw8rHkv1XiMoi81EP6Gs4Y0I6rG7DUZLWT6UsO8FLy2yU86Vv0NGZjKlxI2UUZ-EnUXwvBC4Qegs64RI3-78MBXvE9qSOaB6okT5HIcVj9Z_vPARyGk2k5cFgWbZptijTKGBwY_CywJzajW-pcCjKFoIHLyVEVpIkVmWhtKHJQNqv5qZ5btl6ZyVEl9KVwqMLp6nBLvACXGboCN7lt9--lskihyrOV1i8JFiIKiVZtCC_cADBe2ezVAhHo_ouiC2RitK_7n27AiV_PD3Cnt8K3cTQaNYBrjcjGnIiVI2n2qAP7BWOG11zAjqg7uF5nJpsNK_smPz_pcCxe5OPaqgBtHoVODDt6HpK_dlFf4T7qekc6RaFdNoRLI5v0hJBj1vT6bC-tAbCvAIuOH-OjtV7yQm5RMSr3ys873QvGDF1gn8xEjyLiZPxmK88cyFv_Dr5-FBB0=s2048-w2048-h2048-n-k?authuser=0" alt=""/>SalvandounasPatitas<p></p>
+                <img class="icon" src="https://lh3.googleusercontent.com/fife/ALs6j_Hdz1vGEWSZk5X3v9RwbvkLRbKsbPefG5qxmG8smK81Cmzs0ycDQQCmWnchrLwNjmu7-1NU3cswklnqE0De3P4R8n8r3dxFmW3obOXjAV3mOgwE9ymyhiwaxsOM8nWeKyvWV-HkI0WNMzSLDpppg4iBnhvVPGBsVx11gyVw77P_7NHy330zclTsoA3UEW_veXTMdXG5EI_CPUj6n6rGPyQFKNTagaSNOmP__GWtR4cY-Mh3aBZttLaeTPfd7Hlk18t2wh9CqzWFfv3SvVDPAj-s01IC7c6RK3mxgdUfOUCatAoyyOB4NJscmG-Q6j5lxJWMhzPFuMp6MqQJIYTYntBslxhiHWjIwHqT7FFfmKrDYJvbmC2foHZ6L9oD_Ob6ouEUnY3QcU8hettAZc0D_xRkXL_P4-fwnCtImMDlXNtyn7kertqTstE0DiiS0_GuVbb45F6WpYXpXnU-cj94s6TP_AuULuKtFLlurQvNdCuojQbmaSbMsmcIi5z4z2wIHW2-0h3aZyu-qd8IZhgdLk7zk9OjsUYswWxIj1CzoIrXO0tN_K0eNsoh4v-ri87zJ6cQitjsz3M0vowG2vRsao_hOfymVgHjGFeSL9IUuQkqRfTnVSBYxb_bNNFAtGPdu9PsyI1oq2x-6hTGMaVCeAEuiC7HWTe6cvOjRTnUiBKr7-VpDSt4g7yyzxkzW8-PrqLgV0FjJdb0yu_IVuXGuWg65ulIh6qilgv3l94WA3Wn5lwiDvM0a5uvND7kF2zWdBi8bgPYGLBvoV8zEaz-IdJ_c6KjvbLrW0VNNm9q-zFwghOuiKb2LxvO8yu-hypDa9Tgrj4NGrIm5UcO5wm0mm6Xi0m_FA--Na13woUg93hJNqTCLn3Hdmdj5SR0GfCzMgEOySwiT35NbnbdVzP_WQ_OQuQtr-3NlISTfiIWn_f2QjANActmoAYF4nV2MMPUE5ZjavVE8gZqqVtOULOjuG6ZXAGOk5LGvtoUmPxiXfPfsRwy4-BcGJNfrqrbEU3wZefAjeJH9GX1R4T48mgHgbd0W-D58jL71b2u4l9Q1sViHMvV_B6aKZFjESxsyCidNjoWAsSeoHjNa_mw9un38iXpbANDv5Jl1_Cr9dRf0I2VCREHKk1zL-lxDvAYoI1aJaw=s2048-w2048-h2048-n-k?authuser=0" alt=""/>SalvandounasPatitas<p></p>
+                <img class="icon" src="https://lh3.googleusercontent.com/fife/ALs6j_FPz5oh8fnXMR7iCbdAFo72B9laW_YSlDCpk1UqJMbVKiFnaW_o7HymasTaW8-Ut6SZiCVXBOn7xJOUCLKm2Eb9py7JtkZwaui2KbfwEFgOgoQ8jsECMqnjlKCNDhRCrQkgyA2Xzs-432edXHQMxaGpb7zuBz62lO_2MfcK9KtQvGfFkgCLexzcN8G1jzDiEXiokXPlxgdcjMI9Jmh-ugX4JYeUiKfdQgjDY3RxSUW9U8Kl7r5L6flA-ibq44p1MeFhwJDAsygabJ7pONXAnNeY1Ej_UHanDEBwMfG4Rji7ZiJjpp_n4Q2X44WbF98fTuU4dOtK27LeCrH6SE1CptkZE9umIhe3HZQnalnjIeIZQPdQNe_W1-QldlsqXxF176wBfyJ1iQtZxThB1z3wJ5SN8bnJCi5yxV_gody7_7xEQCOzToq0CKi3JUGP8IjrzXoCUfX2ZV5oHPV-zEEOxMPNfZQUtnzsBagSasQ_PTwc02qGJZxVpIN3Rt3l47l3W1yhs3E9-md9ubntkE4isvZaYsPix9Ip-75eW_3LEe2Ep_qv9TdyRMLycMS_CXsI1cZJx6na4d700e0Q-7yqztxrnqJZW_CzT06eDvg0zdh9Igag4Q3cidy03KwZ_45uQ754SmGmfzGBYEP80-AnjbM0rL_Hg9f-PAif2FhfI7omkkgOx8FUcRZN2Y2gZthuhg-9B-L3g8kFeX0DbcmZ9EtIrEW2gduv30mc-JW57i_PzgVVfnlhXV8vNBMekZx9dZXzvif-h0_OMmTbxQQIKV4Dx9EykDZGZMjxnm6RXl7rRn9L8LDQ4BKLd6C_GJJqUnXOVunUblr2YUUnaz26xltSVbeCXW5rg8cmHZ-QWBgZg5lV1rxR8OJUDPJfOThgreBj2Hf7nU0Y7zI3uf1znq5U-C5aL1qs14k1Mdy8oZv_d8IW-qbQuZx-o-JSEmbieXxqcs-19jpfxfcisRTTrJemAKIQaBtexq71Dyn05ezjj7lgv-UIWoGhHxQ0m8n9cnaVkASBW2_i5tiPDIS0DeXvt_CCMyS0WIu07n2U_jeTGeJ7ORbx0rZTUO8DqDrx-sI2FJ1VoNV7_U8u--0uA1sz8s3g2GcdGMVcSiiNwxAgVwMQppZISxz7SDTvcqQWXpol=s256-w256-h256-n-k?authuser=0" alt=""/>contacto@salvandounaspatitas.com<p></p>
+        
+                
+            </div>
+            <div class="contact-column">
+                <h2 th:text="#{contacto.ubicacion}">Ubicación</h2>
+                <p th:text="#{contacto.direccion}">Dirección: Calle </p>
+                <p th:text="#{contacto.direccion2}">Dirección</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3930.051177847786!2d-84.084307!3d9.929695999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTUnNDYuOSJOIDg0wrAwNScwMy41Ilc!5e0!3m2!1ses-419!2scr!4v1721112336954!5m2!1ses-419!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            </div>
+        </div>
+        
+        
+        
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span th:text="#{plantilla.derechos}">Derechos reservados</span></p>
+        </div>
+    </footer>
+</body>
+</html>
